@@ -1,6 +1,6 @@
 <template>
   <div>
-    <todo-list></todo-list>
+    <todo-list :msg="titleProp"></todo-list>
   </div>
 </template>
 
@@ -9,7 +9,15 @@ import TodoList from './components/TodoList.vue'
 
 export default {
   components:{
+    //Import the toDoList component
     TodoList
+  },
+  //Define the data object to save an isntance of the components data
+  data(){
+    return{
+      titleProp: 'To do list'
+    }
+    
   }
 };
 </script>
